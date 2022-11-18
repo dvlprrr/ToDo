@@ -1,0 +1,9 @@
+.profile__name {
+  align-self: end;
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+  max-width: 350px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

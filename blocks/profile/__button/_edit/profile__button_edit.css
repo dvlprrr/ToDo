@@ -1,0 +1,16 @@
+.profile__button_edit {
+  align-self: end;
+  background-image: url(../../../../images/pen.svg);
+  background-color: transparent;
+  background-position: 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+  outline: none;
+  padding: 0;
+  border: 1px solid white;
+}
