@@ -18,3 +18,12 @@
 @import url(../blocks/profile/__name/profile__name.css);
 @import url(../blocks/profile/__status/profile__status.css);
 @import url(../blocks/profile/__plus/profile__plus.css);
+/* Popup */
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__content/popup__content.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/__main/popup__main.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__confirm/popup__confirm.css);
+@import url(../blocks/popup/_is-opened/popup_is-opened.css);
