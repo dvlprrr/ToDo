@@ -35,3 +35,4 @@
 @import url(../blocks/todo/__button/todo__button.css);
 @import url(../blocks/todo/__button/_type/_accept/todo__button_type_accept.css);
 @import url(../blocks/todo/__button/_type/_reject/todo__butto_type_reject.css);
+@import url(../blocks/todo/__block/_type/_complete/todo__block_type_complete.css);
