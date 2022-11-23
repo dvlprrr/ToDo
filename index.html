@@ -34,29 +34,7 @@
             <img class="profile__plus" src="./images/plus.svg" alt="Плюс" />
           </button>
         </section>
-        <div class="todo">
-          <div class="todo__block">
-            <p class="todo__text">ПОДРОЧИТЬ</p>
-            <div class="todo__buttons">
-              <button class="todo__button todo__button_type_accept"></button>
-              <button class="todo__button todo__button_type_reject"></button>
-            </div>
-          </div>
-          <div class="todo__block">
-            <p class="todo__text">подрочить</p>
-            <div class="todo__buttons">
-              <button class="todo__button todo__button_type_accept"></button>
-              <button class="todo__button todo__button_type_reject"></button>
-            </div>
-          </div>
-          <div class="todo__block">
-            <p class="todo__text">Подрочить</p>
-            <div class="todo__buttons">
-              <button class="todo__button todo__button_type_accept"></button>
-              <button class="todo__button todo__button_type_reject"></button>
-            </div>
-          </div>
-        </div>
+        <div class="todo"></div>
       </main>
       <div class="popup">
         <div class="popup__content">
@@ -84,6 +62,15 @@
         </div>
       </div>
     </div>
+    <template id="template">
+      <div class="todo__block">
+        <p class="todo__text">ПОДРОЧИТЬ</p>
+        <div class="todo__buttons">
+          <button class="todo__button todo__button_type_accept"></button>
+          <button class="todo__button todo__button_type_reject"></button>
+        </div>
+      </div>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
