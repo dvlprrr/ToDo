@@ -27,3 +27,11 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__confirm/popup__confirm.css);
 @import url(../blocks/popup/_is-opened/popup_is-opened.css);
+/* Todo */
+@import url(../blocks/todo/todo.css);
+@import url(../blocks/todo/__block/todo__block.css);
+@import url(../blocks/todo/__text/todo__text.css);
+@import url(../blocks/todo/__buttons/todo__buttons.css);
+@import url(../blocks/todo/__button/todo__button.css);
+@import url(../blocks/todo/__button/_type/_accept/todo__button_type_accept.css);
+@import url(../blocks/todo/__button/_type/_reject/todo__butto_type_reject.css);

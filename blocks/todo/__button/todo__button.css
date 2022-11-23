@@ -1,0 +1,12 @@
+.todo__button {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 50px 50px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}

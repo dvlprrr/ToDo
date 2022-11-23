@@ -1,0 +1,15 @@
+.todo__block {
+  font-size: 40px;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 70%;
+  align-items: center;
+  margin: 0 auto 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.todo__block:last-child {
+  margin-bottom: 0;
+}

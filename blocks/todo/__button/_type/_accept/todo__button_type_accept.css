@@ -1,0 +1,5 @@
+.todo__button_type_accept {
+  background-image: url(../../../../../images/tick.svg);
+  background-position: center;
+  margin-bottom: 5px;
+}

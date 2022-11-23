@@ -21,6 +21,7 @@ function formSubmitHandler(evt) {
   profileName.textContent = inputName.value;
   profileStatus.textContent = inputStatus.value;
   closePopup(popupEdit);
+  console.log(evt.type);
 }
 
 //Обработчики события
