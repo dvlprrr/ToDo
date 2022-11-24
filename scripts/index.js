@@ -17,11 +17,6 @@ const addForm = document.querySelector(".popup-add__form");
 const confirmButtonAdd = document.querySelector(".popup__confirm_add")
 const popupTitle = document.querySelector(".popup__title_add")
 const popupAll = document.querySelectorAll(".popup")
-const popupChange = document.querySelector(".popup__change")
-const inputChange = document.querySelector(".popup__input_change")
-const buttonCloseChange = document.querySelector(".popup__close-change")
-const buttonChangeConfirm = document.querySelector(".popup__confirm_change")
-const popupChangeForm = document.querySelector(".popup-change__form")
 let editItemElement;
 
 // Функции
@@ -33,6 +28,7 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove("popup_is-opened");
   document.removeEventListener("keydown", handleEscapeClose)
+  addForm.reset()
 }
 
 function formSubmitHandler(evt) {
@@ -41,15 +37,17 @@ function formSubmitHandler(evt) {
   profileStatus.textContent = inputStatus.value;
   closePopup(popupEdit)
 }
+
 function deleteItem(evt) {
   evt.target.closest(".todo__block").remove()
 }
+
 function completeItem(evt) {
   const completeSingleItem = evt.target.closest(".todo__block")
   completeSingleItem.classList.toggle("todo__block_type_complete")
   todo.append(completeSingleItem)
-
 }
+
 function renderItem(text) {
   const template = document.querySelector("#template").content
   const listItem = template.cloneNode(true)
@@ -63,11 +61,13 @@ function renderItem(text) {
   editButton.addEventListener("click", editElement)
   todo.prepend(listItem)
 }
+
 function renderList(array) {
   array.forEach(element => {
     renderItem(element)
   });
 }
+
 renderList(initialItem)
 
 function editElement(evt) {
@@ -89,16 +89,20 @@ function addElement(evt) {
   } else {
     editItemElement.textContent = inputAdd.value
     confirmButtonAdd.textContent = "Добавить"
+    editItemElement = null;
   }
+
   closePopup(popupAdd)
-  addForm.reset()
+
 }
+
 function closePopupOverlay(evt) {
   const popupOpen = document.querySelector(".popup_is-opened");
   if (evt.target === popupOpen) {
     closePopup(popupOpen);
   }
 }
+
 function handleEscapeClose(evt) {
   const popupOpen = document.querySelector(".popup_is-opened");
   if (evt.keyCode === 27) {
@@ -114,9 +118,11 @@ popupAll.forEach((evt) => {
 editButton.addEventListener("click", () => {
   openPopup(popupEdit);
 });
+
 closeButton.addEventListener("click", () => {
   closePopup(popupEdit);
 });
+
 popupForm.addEventListener("submit", formSubmitHandler);
 
 addButton.addEventListener("click", () => {
@@ -128,11 +134,3 @@ buttonCloseAdd.addEventListener("click", () => {
   addForm.reset()
 })
 addForm.addEventListener("submit", addElement)
-
-// buttonCloseChange.addEventListener("click", () => {
-//   closePopup(popupChange)
-// })
-
-
-
-
