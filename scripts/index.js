@@ -78,7 +78,6 @@ function editElement(evt) {
   editItemElement = editItemText;
   inputAdd.value = editItemText.textContent;
   confirmButtonAdd.textContent = "Изменить"
-
 }
 
 function addElement(evt) {
@@ -91,9 +90,7 @@ function addElement(evt) {
     confirmButtonAdd.textContent = "Добавить"
     editItemElement = null;
   }
-
   closePopup(popupAdd)
-
 }
 
 function closePopupOverlay(evt) {
@@ -134,3 +131,6 @@ buttonCloseAdd.addEventListener("click", () => {
   addForm.reset()
 })
 addForm.addEventListener("submit", addElement)
+// ДЗ
+// Сделать чтобы при клике на кнопку добавлялся новый текст
+// и при клике на текст, он удалялся
