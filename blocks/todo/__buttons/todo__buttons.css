@@ -1,5 +1,6 @@
 .todo__buttons {
+  width: 25%;
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }

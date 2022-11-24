@@ -36,7 +36,7 @@
         </section>
         <div class="todo"></div>
       </main>
-      <div class="popup">
+      <div class="popup popup__edit">
         <div class="popup__content">
           <form class="popup__form" action="">
             <fieldset class="popup__main">
@@ -65,7 +65,9 @@
         <div class="popup__content">
           <form class="popup__form popup-add__form" action="">
             <fieldset class="popup__main">
-              <h2 class="popup__title">Добавить пункт в список</h2>
+              <h2 class="popup__title popup__title_add">
+                Добавить пункт в список
+              </h2>
               <input
                 placeholder="Введите задачу"
                 class="popup__input popup__input_add"
@@ -73,10 +75,36 @@
                 value=""
                 type="text"
               />
-              <button type="submit" class="popup__confirm">Добавить</button>
+              <button type="submit" class="popup__confirm popup__confirm_add">
+                Добавить
+              </button>
             </fieldset>
           </form>
           <button class="popup__close popup__close-add"></button>
+        </div>
+      </div>
+      <div class="popup popup__change">
+        <div class="popup__content">
+          <form class="popup__form popup-change__form" action="">
+            <fieldset class="popup__main">
+              <h2 class="popup__title popup__title_change">Изменить пункт</h2>
+              <input
+                placeholder="Введите задачу"
+                class="popup__input popup__input_change"
+                name="change"
+                value=""
+                type="text"
+                autocomplete="none"
+              />
+              <button
+                type="submit"
+                class="popup__confirm popup__confirm_change"
+              >
+                Изменить
+              </button>
+            </fieldset>
+          </form>
+          <button class="popup__close popup__close-change"></button>
         </div>
       </div>
     </div>
@@ -84,6 +112,7 @@
       <div class="todo__block">
         <p class="todo__text">ПОДРОЧИТЬ</p>
         <div class="todo__buttons">
+          <button class="todo__button todo__button_type_edit"></button>
           <button class="todo__button todo__button_type_accept"></button>
           <button class="todo__button todo__button_type_reject"></button>
         </div>

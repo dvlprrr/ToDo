@@ -1,0 +1,8 @@
+.todo__button_type_edit {
+  background-image: url(../../../../../images/edit.png);
+  background-color: transparent;
+  background-size: cover;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+}
