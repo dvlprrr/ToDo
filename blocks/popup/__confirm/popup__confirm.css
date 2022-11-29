@@ -8,9 +8,4 @@
   cursor: pointer;
   border-radius: 3px;
   font-size: 18px;
-  opacity: 1;
-  transition: opacity linear 0.5s;
-}
-.popup__confirm:hover {
-  opacity: 0.9;
 }

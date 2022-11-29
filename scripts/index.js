@@ -14,7 +14,6 @@ const addButton = document.querySelector(".profile__button_add");
 const buttonCloseAdd = document.querySelector(".popup__close-add");
 const inputAdd = document.querySelector(".popup__input_add");
 const addForm = document.querySelector(".popup-add__form");
-const confirmButtonAdd = document.querySelector(".popup__confirm_add")
 const popupTitle = document.querySelector(".popup__title_add")
 const popupAll = document.querySelectorAll(".popup")
 let editItemElement;
@@ -77,7 +76,7 @@ function editElement(evt) {
   let editItemText = editButtonElement.querySelector(".todo__text");
   editItemElement = editItemText;
   inputAdd.value = editItemText.textContent;
-  confirmButtonAdd.textContent = "Изменить"
+  confirmButton.textContent = "Изменить"
 }
 
 function addElement(evt) {
@@ -87,7 +86,7 @@ function addElement(evt) {
     renderItem(inputValue)
   } else {
     editItemElement.textContent = inputAdd.value
-    confirmButtonAdd.textContent = "Добавить"
+    confirmButton.textContent = "Добавить"
     editItemElement = null;
   }
   closePopup(popupAdd)
@@ -131,6 +130,3 @@ buttonCloseAdd.addEventListener("click", () => {
   addForm.reset()
 })
 addForm.addEventListener("submit", addElement)
-// ДЗ
-// Сделать чтобы при клике на кнопку добавлялся новый текст
-// и при клике на текст, он удалялся

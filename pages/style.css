@@ -27,6 +27,8 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__confirm/popup__confirm.css);
 @import url(../blocks/popup/_is-opened/popup_is-opened.css);
+@import url(../blocks/popup/__input/_add/popup__input_add.css);
+@import url(../blocks/popup/__confirm/_disabled/popup__confirm_disabled.css);
 /* Todo */
 @import url(../blocks/todo/todo.css);
 @import url(../blocks/todo/__block/todo__block.css);
@@ -37,3 +39,6 @@
 @import url(../blocks/todo/__button/_type/_reject/todo__butto_type_reject.css);
 @import url(../blocks/todo/__block/_type/_complete/todo__block_type_complete.css);
 @import url(../blocks/todo/__button/_type/_edit/todo__button_type_edit.css);
+/* Validate */
+@import url(../blocks/task/__error/task__error.css);
+@import url(../blocks/task/__error/__error_visible/task__error_visible.css);
