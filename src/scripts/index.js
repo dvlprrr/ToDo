@@ -1,3 +1,6 @@
+import "../pages/style.css"
+import { Validate } from "./Validate.js";
+import { classObj } from "../utils/constant.js";
 const popupEdit = document.querySelector(".popup__edit");
 const editButton = document.querySelector(".profile__button_edit");
 const confirmButton = popupEdit.querySelector(".popup__confirm");
@@ -16,18 +19,28 @@ const inputAdd = document.querySelector(".popup__input_add");
 const addForm = document.querySelector(".popup-add__form");
 const popupTitle = document.querySelector(".popup__title_add")
 const popupAll = document.querySelectorAll(".popup")
+const popoupAvatar = document.querySelector(".popup__avatar")
+const profileAvatar = document.querySelector(".profile__avatar")
+const closeAvatar = document.querySelector(".popup__close-avatar")
+const inputAvatar = document.querySelector(".popup__input_avatar")
+const formAvatar = document.querySelector(".popup-avatar__form")
+const buttonAvatar = document.querySelector(".popup__confirm_avatar")
+const buttonChange = document.querySelector(".popup__confirm_change")
 let editItemElement;
-
+const validateEdit = new Validate(classObj, popupForm)
+const validateAdd = new Validate(classObj, addForm)
+const validateAvatar = new Validate(classObj, formAvatar)
+validateEdit.enableValidation()
+validateAdd.enableValidation()
+validateAvatar.enableValidation()
 // Функции
 function openPopup(popup) {
   popup.classList.add("popup_is-opened");
-  document.addEventListener("keydown", handleEscapeClose)
 }
-
+// Сделать класс
 function closePopup(popup) {
   popup.classList.remove("popup_is-opened");
-  document.removeEventListener("keydown", handleEscapeClose)
-  addForm.reset()
+
 }
 
 function formSubmitHandler(evt) {
@@ -76,7 +89,6 @@ function editElement(evt) {
   let editItemText = editButtonElement.querySelector(".todo__text");
   editItemElement = editItemText;
   inputAdd.value = editItemText.textContent;
-  confirmButton.textContent = "Изменить"
 }
 
 function addElement(evt) {
@@ -86,9 +98,9 @@ function addElement(evt) {
     renderItem(inputValue)
   } else {
     editItemElement.textContent = inputAdd.value
-    confirmButton.textContent = "Добавить"
     editItemElement = null;
   }
+  inputAdd.value = ""
   closePopup(popupAdd)
 }
 
@@ -99,19 +111,20 @@ function closePopupOverlay(evt) {
   }
 }
 
-function handleEscapeClose(evt) {
-  const popupOpen = document.querySelector(".popup_is-opened");
-  if (evt.keyCode === 27) {
-    closePopup(popupOpen);
-  }
+function changeImage(evt) {
+  evt.preventDefault()
+  profileAvatar.src = inputAvatar.value
+  closePopup(popoupAvatar)
+  inputAvatar.value = ""
 }
-
 //Обработчики события
-popupAll.forEach((evt) => {
-  evt.addEventListener("mousedown", closePopupOverlay)
-})
+
+popupEdit.addEventListener("mousedown", closePopupOverlay)
 
 editButton.addEventListener("click", () => {
+  inputName.value = profileName.textContent;
+  inputStatus.value = profileStatus.textContent;
+  validateEdit.buttonDisabled()
   openPopup(popupEdit);
 });
 
@@ -121,12 +134,28 @@ closeButton.addEventListener("click", () => {
 
 popupForm.addEventListener("submit", formSubmitHandler);
 
+addForm.addEventListener("submit", addElement)
+
 addButton.addEventListener("click", () => {
+  validateAdd.buttonDisabled()
   openPopup(popupAdd)
 })
 
-buttonCloseAdd.addEventListener("click", () => {
-  closePopup(popupAdd)
-  addForm.reset()
+profileAvatar.addEventListener("click", () => {
+  validateAvatar.buttonDisabled()
+  openPopup(popoupAvatar)
 })
-addForm.addEventListener("submit", addElement)
+
+popoupAvatar.addEventListener("mousedown", closePopupOverlay)
+
+closeAvatar.addEventListener("click", () => {
+  closePopup(popoupAvatar)
+
+})
+
+formAvatar.addEventListener("submit", changeImage)
+
+//Повторить ООП
+// Модули
+// webpack
+

@@ -6,7 +6,6 @@
 /* Header */
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__title/header__title.css);
-@import url(../blocks/header/__lang/header__lang.css);
 @import url(../blocks/header/__lang-link/header__lang-link.css);
 /* Profile */
 @import url(../blocks/profile/profile.css);
@@ -27,7 +26,6 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__confirm/popup__confirm.css);
 @import url(../blocks/popup/_is-opened/popup_is-opened.css);
-@import url(../blocks/popup/__input/_add/popup__input_add.css);
 @import url(../blocks/popup/__confirm/_disabled/popup__confirm_disabled.css);
 /* Todo */
 @import url(../blocks/todo/todo.css);

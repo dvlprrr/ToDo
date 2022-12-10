@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
-    <link rel="stylesheet" href="./pages/style.css" />
   </head>
   <body class="body">
     <div class="page">
@@ -21,9 +20,10 @@
           <div class="profile__column">
             <img
               class="profile__avatar"
-              src="./images/avatar.jpg"
+              src="<%=require('./images/avatar.jpg')%>"
               alt="Аватар"
             />
+
             <div class="profile__info">
               <h2 class="profile__name">Андрей</h2>
               <button class="profile__button_edit"></button>
@@ -31,7 +31,11 @@
             </div>
           </div>
           <button class="profile__button_add">
-            <img class="profile__plus" src="./images/plus.svg" alt="Плюс" />
+            <img
+              class="profile__plus"
+              src="<%=require('./images/plus.svg')%>"
+              alt="Плюс"
+            />
           </button>
         </section>
         <div class="todo"></div>
@@ -47,9 +51,10 @@
                 name="name"
                 value=""
                 type="text"
-                id="andrey"
+                id="change"
                 maxlength="30"
                 minlength="2"
+                required
               />
               <span id="change_error" class="task__error"
                 >Вы пропустили это поле
@@ -63,8 +68,9 @@
                 id="funny"
                 maxlength="30"
                 minlength="2"
+                required
               />
-              <span id="change_error" class="task__error"
+              <span id="funny_error" class="task__error"
                 >Вы пропустили это поле
               </span>
               <button type="submit" class="popup__confirm">Изменить</button>
@@ -89,14 +95,48 @@
                 id="change"
                 maxlength="30"
                 minlength="2"
+                required
               />
               <span id="change_error" class="task__error"
-                >Вы пропустили это поле</span
+                >Вы пропустили это поле
+              </span>
+              <button
+                type="submit"
+                class="popup__confirm popup__confirm_change"
               >
-              <button type="submit" class="popup__confirm">Добавить</button>
+                Добавить
+              </button>
             </fieldset>
           </form>
-          <button class="popup__close popup__close-add"></button>
+        </div>
+      </div>
+      <div class="popup popup__avatar">
+        <div class="popup__content">
+          <form name="form" class="popup__form popup-avatar__form" novalidate>
+            <fieldset class="popup__main">
+              <h2 class="popup__title popup__title_avatar">Изменить аватар</h2>
+              <input
+                placeholder="Введите url"
+                class="popup__input popup__input_avatar"
+                name="image"
+                value=""
+                type="url"
+                id="avatar"
+                minlength="2"
+                required
+              />
+              <span id="avatar_error" class="task__error"
+                >Вы пропустили это поле</span
+              >
+              <button
+                type="submit"
+                class="popup__confirm popup__confirm_avatar"
+              >
+                Изменить
+              </button>
+            </fieldset>
+          </form>
+          <button class="popup__close popup__close-avatar"></button>
         </div>
       </div>
     </div>
@@ -110,7 +150,6 @@
         </div>
       </div>
     </template>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/validate.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
